@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import CardsUI from './components/CardsUI'
-
+import Navbar from './components/Navbar'
+import Section1 from './components/section1/section1'
 function App() {
  const cardsData =  [
   {
@@ -67,17 +68,61 @@ function App() {
     "location": "Delhi, India"
   }
 ]
+
+const userData = [
+  {
+    id: 1,
+    img: "https://images.unsplash.com/photo-1507206130118-b5907f817163?auto=format&fit=crop&q=80&w=387",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iusto ullam porro temporibus magnam autem aperiam esse tenetur.",
+    mainBtn: "Satisfied"
+  },
+  {
+    id: 2,
+    img: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=387",
+    text: "Aliquam quaerat impedit dolor velit explicabo fugiat assumenda quasi at vitae.",
+    mainBtn: "Like"
+  }
+  ,
+  {
+    id: 3,
+    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&q=80&w=387",
+    text: "Repudiandae laborum numquam vero dolore omnis saepe fugit cupiditate dignissimos.",
+    mainBtn: "Approve"
+  },
+  {
+    id: 4,
+    img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=387",
+    text: "Voluptatem eligendi magni necessitatibus eaque exercitationem aspernatur cumque nemo dolore.",
+    mainBtn: "Loved It"
+  },
+  {
+    id: 5,
+    img: "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=387",
+    text: "Minus soluta nobis asperiores et, magnam similique numquam accusantium cupiditate.",
+    mainBtn: "Great"
+  },
+  {
+    id: 6,
+    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=387",
+    text: "Doloribus provident laborum laudantium adipisci amet omnis excepturi suscipit aliquam.",
+    mainBtn: "Next"
+  }
+]
+
  
 
  console.log(cardsData)
   return (
     
-      <div className='bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto' >
-        {cardsData.map((card, index)=>(
-                <CardsUI key={index} data={card} />
-        ))}
+      // <div className='bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto' >
+      //   {cardsData.map((card, index)=>(
+      //           <CardsUI key={index} data={card} />
+      //   ))}
       
-       </div>
+      //  </div>
+      <div>
+      <Section1 userData={userData} />
+      </div>
   )
 }
 
