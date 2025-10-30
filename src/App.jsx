@@ -5,6 +5,7 @@ import './App.css'
 import CardsUI from './components/CardsUI'
 import Navbar from './components/Navbar'
 import Section1 from './components/section1/section1'
+import FeedbackForm from './components/section2/FeedbackForm'
 function App() {
  const cardsData =  [
   {
@@ -122,6 +123,7 @@ const userData = [
       //  </div>
       <div>
       <Section1 userData={userData} />
+      <FeedbackForm/>
       </div>
   )
 }
