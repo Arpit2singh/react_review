@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Section1 from './components/section1/section1'
 import FeedbackForm from './components/section2/FeedbackForm'
 import ThirdSection from './components/ThirdSection'
+import HeroSection from './components/HeroSection'
 function App() {
  const cardsData =  [
   {
@@ -123,7 +124,9 @@ const userData = [
       
       //  </div>
       <div>
+      <HeroSection/>
       <Section1 userData={userData} />
+     
       <FeedbackForm/>/
       <ThirdSection/>
       </div>
