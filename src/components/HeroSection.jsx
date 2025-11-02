@@ -1,10 +1,14 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
 import Splineanimation from './splineanimation';
+import Navbartop from './Navbartop';
 
 const HeroSection = () => {
   return (
-    <div className='flex justify-between items-center bg-gradient-to-tr from-black via-gray-900  to-yellow-950 '>
+    <div className=' bg-gradient-to-tr from-black via-gray-900  to-yellow-950 flex flex-col justify-center items-center  '>
+      <Navbartop/>
+     <div className='flex justify-between items-center  '>
+     
       
     <div className='h-screen w-[60%] bg-transparent flex flex-col justify-center items-start font-bold p-10 gap-10'>
          <div className='bg-gradient-to-r from-red-400 to-blue-400 flex justify-center text-center font-extrabold text-6xl bg-clip-text text-transparent p-4 '> Hey, what’s up? I’m Arpit</div>
@@ -23,6 +27,8 @@ const HeroSection = () => {
       <Splineanimation/>
       </div>
     </div>
+    </div>
+
   )
 }
 

@@ -8,6 +8,10 @@ import Section1 from './components/section1/section1'
 import FeedbackForm from './components/section2/FeedbackForm'
 import ThirdSection from './components/ThirdSection'
 import HeroSection from './components/HeroSection'
+import Navbartop from './components/Navbartop'
+import {Routes ,Route} from 'react-router'
+import About from './components/Pages/About'
+
 function App() {
  const cardsData =  [
   {
@@ -117,18 +121,35 @@ const userData = [
  console.log(cardsData)
   return (
     
-      // <div className='bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto' >
-      //   {cardsData.map((card, index)=>(
-      //           <CardsUI key={index} data={card} />
-      //   ))}
-      
-      //  </div>
-      <div>
-      <HeroSection/>
-      <Section1 userData={userData} />
      
-      <FeedbackForm/>/
-      <ThirdSection/>
+      <div>
+     {/* <Routes>
+      <Route path='/' element={<HeroSection/>} ></Route>
+      <Route path='/About' element={<HeroSection/>} ></Route>
+      <Route path='/Resume' element={<HeroSection/>} ></Route>
+      <Route path='/Contact' element={<FeedbackForm/>} ></Route>
+      <Route path='/Skills' element={<ThirdSection/>} ></Route>
+      <Route path='/Projects' element={<CardsUI/>} ></Route>
+     </Routes> */}
+      <div id="home"  ><HeroSection /></div>
+      <div id="about" > <About /></div>
+      <div id="skills">  <ThirdSection  /></div>
+      <div id="Achieve" > <Section1 userData={userData}  /></div>
+      <div id="contact" >    <FeedbackForm  /></div>
+     
+    
+  
+
+    <div id="projects" className="bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto">
+      {cardsData.map((card, index) => (
+        <CardsUI key={index} data={card} />
+      ))}
+    </div>
+
+    
+
+
+      
       </div>
   )
 }
