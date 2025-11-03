@@ -11,6 +11,7 @@ import HeroSection from './components/HeroSection'
 import Navbartop from './components/Navbartop'
 import {Routes ,Route} from 'react-router'
 import About from './components/Pages/About'
+import NoftFoundPage from './components/Pages/NoftFoundPage'
 
 function App() {
  const cardsData =  [
@@ -131,21 +132,28 @@ const userData = [
       <Route path='/Skills' element={<ThirdSection/>} ></Route>
       <Route path='/Projects' element={<CardsUI/>} ></Route>
      </Routes> */}
-      <div id="home"  ><HeroSection /></div>
+
+
+     <Routes>
+      <Route path='*' element={<NoftFoundPage/>} />
+      <Route path='/' element={
+        <>
+         <div id="home"  ><HeroSection /></div>
       <div id="about" > <About /></div>
       <div id="skills">  <ThirdSection  /></div>
       <div id="Achieve" > <Section1 userData={userData}  /></div>
       <div id="contact" >    <FeedbackForm  /></div>
-     
-    
   
 
     <div id="projects" className="bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto">
       {cardsData.map((card, index) => (
         <CardsUI key={index} data={card} />
       ))}
-    </div>
-
+    </div> 
+        </>
+      } />
+     </Routes>
+     
     
 
 
