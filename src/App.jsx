@@ -16,66 +16,137 @@ import NoftFoundPage from './components/Pages/NoftFoundPage'
 function App() {
  const cardsData =  [
   {
-    "status": "saved 🔖",
-    "company": "Amazon",
-    "posted": "3 days ago",
-    "title": "Senior UI/UX Designer",
-    "type": "Part Time",
-    "level": "Senior Level",
-    "rate": "120 $/day",
-    "location": "Mumbai, India"
+    "status": "Primary Skill ✅",
+    "company": "C / C++",
+    "posted": "2+ years experience",
+    "title": "Problem Solving • DSA",
+    "type": "Core Language",
+    "level": "Intermediate-Advanced",
+    "rate": "Daily Practice",
+    "location": "Leetcode"
   },
   {
-    "status": "new ✨",
-    "company": "Google",
-    "posted": "1 day ago",
-    "title": "Frontend Developer",
-    "type": "Full Time",
-    "level": "Mid Level",
-    "rate": "150 $/day",
-    "location": "Bangalore, India"
+    "status": "Programming Language",
+    "company": "Java",
+    "posted": "1 year",
+    "title": "OOP & DSA",
+    "type": "Backend Language",
+    "level": "Intermediate",
+    "rate": "Used in practice",
+    "location": "Coursework"
   },
   {
-    "status": "featured 🌟",
-    "company": "Microsoft",
-    "posted": "5 days ago",
-    "title": "Product Manager",
-    "type": "Remote",
-    "level": "Senior Level",
-    "rate": "200 $/day",
-    "location": "Hyderabad, India"
+    "status": "Web Basics 🌐",
+    "company": "HTML & CSS",
+    "posted": "1.5 years",
+    "title": "Structure & Styling",
+    "type": "Frontend",
+    "level": "Proficient",
+    "rate": "Used in every UI",
+    "location": "Frontend Projects"
   },
   {
-    "status": "saved 🔖",
-    "company": "Adobe",
-    "posted": "2 days ago",
-    "title": "Graphic Designer",
-    "type": "Contract",
-    "level": "Junior Level",
-    "rate": "100 $/day",
-    "location": "Pune, India"
+    "status": "Web Magic ✨",
+    "company": "JavaScript",
+    "posted": "1.5 years",
+    "title": "Frontend & Backend Logic",
+    "type": "Fullstack",
+    "level": "Intermediate",
+    "rate": "Highly Active",
+    "location": "Projects & Hackathons"
   },
   {
-    "status": "hot 🔥",
-    "company": "Netflix",
-    "posted": "4 days ago",
-    "title": "Motion Graphics Artist",
-    "type": "Part Time",
-    "level": "Mid Level",
-    "rate": "130 $/day",
-    "location": "Chennai, India"
+    "status": "Frontend Framework ⚡",
+    "company": "ReactJS",
+    "posted": "1 year",
+    "title": "Component-driven UI",
+    "type": "Frontend",
+    "level": "Intermediate",
+    "rate": "Actively Learning",
+    "location": "UI Projects"
   },
   {
-    "status": "urgent ⚡",
-    "company": "Tesla",
-    "posted": "6 days ago",
-    "title": "UX Researcher",
-    "type": "Full Time",
-    "level": "Senior Level",
-    "rate": "180 $/day",
-    "location": "Delhi, India"
+    "status": "CSS Framework 🎨",
+    "company": "TailwindCSS",
+    "posted": "1 year",
+    "title": "Modern Design",
+    "type": "Frontend",
+    "level": "Intermediate",
+    "rate": "Used Regularly",
+    "location": "All UI Projects"
+  },
+  {
+    "status": "Backend Runtime 🚀",
+    "company": "NodeJS / ExpressJS",
+    "posted": "1 year",
+    "title": "Server & APIs",
+    "type": "Backend",
+    "level": "Intermediate",
+    "rate": "API Driven",
+    "location": "Fullstack Apps"
+  },
+  {
+    "status": "Database 📊",
+    "company": "MongoDB",
+    "posted": "1 year",
+    "title": "Models & Queries",
+    "type": "Backend Data",
+    "level": "Intermediate",
+    "rate": "Used in Projects",
+    "location": "Full-Stack Apps"
+  },
+  {
+    "status": "Authentication 🔐",
+    "company": "Cookies / Auth",
+    "posted": "1 year",
+    "title": "Sessions & JWT ",
+    "type": "Backend Security",
+    "level": "Intermediate",
+    "rate": "Used in Expenser",
+    "location": "Backend Modules"
+  },
+  {
+    "status": "API Testing 🧪",
+    "company": "Postman",
+    "posted": "1 year",
+    "title": "API Debugging",
+    "type": "Backend Tool",
+    "level": "Proficient",
+    "rate": "Regular Usage",
+    "location": "Fullstack Workflow"
+  },
+  {
+    "status": "AI & Agentic ⚙️",
+    "company": "Google ADK",
+    "posted": "2025",
+    "title": "Smart Reminders, Content AI",
+    "type": "AI Tools",
+    "level": "Beginner",
+    "rate": "Used in UniBridge",
+    "location": "AI ,Python Backend"
+  },
+  {
+    "status": "Version Control ✅",
+    "company": "Git / GitHub",
+    "posted": "2 years",
+    "title": "Collaboration, CI/CD",
+    "type": "DevOps Essentials",
+    "level": "Proficient",
+    "rate": "Daily Committer",
+    "location": "All Projects"
+  },
+  {
+    "status": "Deployment ☁️",
+    "company": "Vercel / Render",
+    "posted": "1 year",
+    "title": "Frontend & Backend Deployment",
+    "type": "Cloud Services",
+    "level": "Proficient",
+    "rate": "Production Ready",
+    "location": "Deployed Apps"
   }
 ]
+
 
 const userData = [
   {
@@ -140,16 +211,17 @@ const userData = [
         <>
       <div id="home"  ><HeroSection /></div>
       <div id="about" > <About /></div>
-      <div id="skills">  <ThirdSection  /></div>
-      <div id="Achieve" > <Section1 userData={userData}  /></div>
-      <div id="contact" >    <FeedbackForm  /></div>
-  
-
-    <div id="projects" className="bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto">
+       <div id="projects" className="bg-red-400 h-screen w-screen flex flex-wrap justify-center overflow-auto">
       {cardsData.map((card, index) => (
         <CardsUI key={index} data={card} />
       ))}
     </div> 
+      <div id="skills">  <ThirdSection  /></div> 
+      <div id="Achieve" > <Section1 userData={userData}  /></div>
+      <div id="contact" >    <FeedbackForm  /></div>
+  
+
+   
         </>
       } />
      </Routes>
