@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import CardsUI from './components/CardsUI'
 import Navbar from './components/Navbar'
@@ -123,7 +123,7 @@ const userData = [
   return (
     
      
-      <div>
+      <div className='bg-gradient-to-tr from-black via-gray-900  to-yellow-950 ' >
      {/* <Routes>
       <Route path='/' element={<HeroSection/>} ></Route>
       <Route path='/About' element={<HeroSection/>} ></Route>
@@ -138,7 +138,7 @@ const userData = [
       <Route path='*' element={<NoftFoundPage/>} />
       <Route path='/' element={
         <>
-         <div id="home"  ><HeroSection /></div>
+      <div id="home"  ><HeroSection /></div>
       <div id="about" > <About /></div>
       <div id="skills">  <ThirdSection  /></div>
       <div id="Achieve" > <Section1 userData={userData}  /></div>

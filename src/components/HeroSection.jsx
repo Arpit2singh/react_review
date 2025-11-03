@@ -5,7 +5,7 @@ import Navbartop from './Navbartop';
 
 const HeroSection = () => {
   return (
-    <div className=' bg-gradient-to-tr from-black via-gray-900  to-yellow-950 flex flex-col justify-center items-center  '>
+    <div className='flex flex-col justify-center items-center  '>
       <Navbartop/>
      <div className='flex justify-between items-center  '>
      
