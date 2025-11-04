@@ -5,14 +5,14 @@ const CardsUI = ({ data }) => {
     console.log("Card Data:", data)
     return (
 
-        <div className='p-3 bg-black'>
-            <div className=' bg-gradient-to-br from-red-200 via-purple-300 to-blue-400 /40 border-white/50 shadow-lg border-2 text-white backdrop-blur-md  h-[350px] w-[250px] rounded-4xl p-3  flex flex-col justify-evenly  '>
+        <div className='p-3 bg-transparent'>
+            <div className=' bg-gradient-to-br from-red-200 via-purple-300 to-blue-400 /40 border-white/50 shadow-lg border-2 text-white backdrop-blur-md  h-[350px] w-[250px] rounded-4xl p-3  flex flex-col justify-evenly shadow-amber-200 '>
                 <div className='flex justify-between p-2 '>
-                    <div className='b-2 border-2 border-[#222] rounded-3xl p-2 overflow-hidden w-10 h-10 flex justify-center items-center ' ><img src='https://thumbs.dreamstime.com/b/amazon-logo-white-background-montreal-canada-july-printed-paper-98221126.jpg' className='h-full w-full object-cover  rounded-full'></img></div>
+                    <div className='b-2 border-2 border-[#222] rounded-3xl overflow-hidden w-10 h-10 flex justify-center items-center ' ><img src={data.imgsrc} className='h-full w-full object-cover  rounded-full'></img></div>
                     <div className='bg-[#999] rounded-xl p-[10px] text-[13px]'>{data.status}</div>
                 </div>
                 <div className='flex justify-between p-1  '>
-                    <div className='font-semibold p-1 text-[25px] font-bold ' >{data.company}</div>
+                    <div className='font-semibold p-1 text-[25px] [text-stroke:2px_black]  font-bold ' >{data.company}</div>
                     <div className='text-[10px] p-2'> {data.posted}</div>
                 </div>
                 <div className='font-bold p-1 text-xl '>{data.title}</div>

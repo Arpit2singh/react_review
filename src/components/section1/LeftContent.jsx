@@ -4,8 +4,13 @@ const LeftContent = () => {
   return (
 
     <div className='h-2/3 w-1/3   flex flex-col justify-between items-start p-2 gap-3 leading-6www '>
-        <div className=' flex justify-center font-bold text-5xl p-2 '>Prospective customer segmentation</div>
-        <div className='text-xl font-medium p-2'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam enim, aliquid incidunt natus illo eum eveniet minima iusto veniam tenetur quo id rem excepturi inventore ullam veritatis harum dolorum suscipit.</div> 
+      <div className='flex justify-center text-white font-bold text-5xl p-2'>
+ What I’ve Been Working On
+</div>
+
+<div className='text-xl font-medium  text-white p-2 text-start leading-10'>
+Things I'm building while growing as a developer — exploring new technologies, solving real problems, and becoming better with every project.</div>
+
     
     <AlignEndHorizontal className='self-start ' />
     </div>
