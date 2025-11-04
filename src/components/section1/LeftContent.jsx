@@ -4,7 +4,9 @@ const LeftContent = () => {
   return (
 
     <div className='h-2/3 w-1/3   flex flex-col justify-between items-start p-2 gap-3 leading-6www '>
-      <div className='flex justify-center text-white font-bold text-5xl p-2'>
+      <div className='flex justify-center  bg-clip-text text-transparent bg-gradient-to-br from-yellow-400 via-orange-400 to-red-400
+
+       font-bold text-5xl p-2'>
  What I’ve Been Working On
 </div>
 

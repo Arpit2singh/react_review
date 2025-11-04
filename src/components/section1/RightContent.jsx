@@ -14,7 +14,7 @@ const RightContent = ({userData}) => {
         <div key={item.id}  className='h-[400px] w-[300px] shrink-0  rounded-4xl overflow-hidden relative ' >
         <img src={item.img} className=' object-cover h-full w-full opacity-25 '></img>
         <div className='absolute top-0  left-0 h-full w-full  p-3 flex justify-between flex-col  '>
-            <div className=' rounded-full h-[40px] w-[40px] p-2 flex justify-center items-center bg-blue-300 font-extrabold'>
+            <div className=' rounded-full h-[40px] w-[40px] p-2 flex justify-center items-center bg-red-400 font-extrabold'>
                {item.id}
             </div>
             <div className='mt-20 font-medium text-white '>{item.text}</div>

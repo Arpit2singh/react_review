@@ -12,6 +12,8 @@ import Navbartop from './components/Navbartop'
 import {Routes ,Route} from 'react-router'
 import About from './components/Pages/About'
 import NoftFoundPage from './components/Pages/NoftFoundPage'
+import SkillsUx from './components/Pages/skillsUx'
+import Footer from './components/Pages/Footer'
 
 function App() {
  const cardsData =  [
@@ -224,14 +226,17 @@ const userData = [
         <>
       <div id="home"  ><HeroSection /></div>
       <div id="about" > <About /></div>
+      <div><SkillsUx/> </div>
        <div id="projects" className="bg-transparent h-screen w-screen flex flex-wrap justify-center overflow-auto">
       {cardsData.map((card, index) => (
         <CardsUI key={index} data={card} />
       ))}
     </div> 
+     <div id="Achieve" > <Section1 userData={userData}  /></div>
       <div id="skills">  <ThirdSection  /></div> 
-      <div id="Achieve" > <Section1 userData={userData}  /></div>
+     
       <div id="contact" >    <FeedbackForm  /></div>
+      <div><Footer/></div>
   
 
    
