@@ -209,7 +209,7 @@ const userData = [
   return (
     
      
-      <div className='bg-gradient-to-tr from-black via-gray-900  to-yellow-950 ' >
+      <div className='bg-gradient-to-tr from-black via-gray-800  to-yellow-900 ' >
      {/* <Routes>
       <Route path='/' element={<HeroSection/>} ></Route>
       <Route path='/About' element={<HeroSection/>} ></Route>
