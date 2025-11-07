@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 #Maincards::-webkit-scrollbar{
     display: none;
 }

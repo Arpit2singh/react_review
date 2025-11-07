@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-
+import Aurora from './components/Aurora'
 import './App.css'
 import CardsUI from './components/CardsUI'
 import Navbar from './components/Navbar'
@@ -207,9 +207,23 @@ const userData = [
 
  console.log(cardsData)
   return (
+
+    <div>
+    <Aurora
+  colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+  blend={0.5}
+  amplitude={1.0}
+  speed={0.5}
+/>
     
      
-      <div className='bg-gradient-to-tr from-black via-gray-800  to-yellow-900 ' >
+      <div style={{
+        position:'relative' ,
+        zIndex:1,
+       
+        color: '#fff' ,
+        
+      }} className='bg-transparent ' >
      {/* <Routes>
       <Route path='/' element={<HeroSection/>} ></Route>
       <Route path='/About' element={<HeroSection/>} ></Route>
@@ -248,6 +262,8 @@ const userData = [
 
 
       
+      </div>
+
       </div>
   )
 }
