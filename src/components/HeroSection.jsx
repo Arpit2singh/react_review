@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
-import Splineanimation from './splineanimation';
+import Splineanimation from './Splineanimation';
 import Navbartop from './Navbartop';
 
 const HeroSection = () => {
