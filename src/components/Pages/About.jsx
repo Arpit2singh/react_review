@@ -30,7 +30,7 @@ My core expertise lies in the MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS) ,
       </p>
      </div>
      <div className='   h-[70%]  flex justify-center items-center w-[45%] overflow-hidden p-2 rounded-4xl '  >
-    <img src='profile.jpg' id='profilePhoto' className=' h-[50%] w-[55%] object-cover h-full mix-blend-screen  object-top   ' ></img>
+    <img src='profile.jpg' id='profilePhoto' className=' h-[50%] w-[55%] object-cover h-full rounded-4xl bg-transparent  object-top   ' ></img>
      </div>
       
     </div>
