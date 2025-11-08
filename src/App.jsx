@@ -12,7 +12,7 @@ import Navbartop from './components/Navbartop'
 import {Routes ,Route} from 'react-router'
 import About from './components/Pages/About'
 import NoftFoundPage from './components/Pages/NoftFoundPage'
-import SkillsUx from './components/Pages/skillsUx'
+import SkillsUx from './components/Pages/SkillsUx'
 import Footer from './components/Pages/Footer'
 
 function App() {
