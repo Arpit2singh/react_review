@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import  { BrowserRouter } from "react-router"
 import UniversalDataContext from './components/Context/UniversalDataContext.jsx'
+// added all the things 
 
 createRoot(document.getElementById('root')).render(
 <UniversalDataContext>
