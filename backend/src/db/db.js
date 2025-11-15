@@ -1,9 +1,13 @@
-const { default: mongoose } = require("mongoose")
+import mongoose from "mongoose";
+import dotenv from "dotenv"
 
 
+ 
 const dbLogic = async ()=>{
     try {
-        const connectionInstance = await mongoose.connect(`${process.env.URI}/${dbName}`)
+        const dbName = "portfolio" 
+        console.log(process.env.URI)
+        const connectionInstance = await mongoose.connect(`${process.env.URI}${dbName}`)
         if(connectionInstance){
             console.log("mongodb connected") ; 
             console.log("mongodb connected at the " , connectionInstance.connection.host) ; 
