@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { feedback } from "../controllers/feedback.controller.js";
 import UserInfo from "../middleware/userinfo.middleware.js";
+import gfgData from "../controllers/gfgData.js";
 
 
 const router = Router() ; 
@@ -12,5 +13,9 @@ router.route("/user").get(UserInfo , (req ,res)=>{
         userInfo :  req.userInfo 
     })
 })
+
+router.route("/gfgData").get(gfgData)
+
+
 
 export default router ; 
