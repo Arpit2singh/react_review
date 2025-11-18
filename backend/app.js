@@ -19,6 +19,7 @@ app.use(UserInfo)
 app.use(visitedUser)
 
 app.use("/portfolio" , router) ;
+app.set("trust proxy", true);
 
 // window.addEventListener("beforeunload", ()=>{
 //     const endTime  = Date.now() ; 

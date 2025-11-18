@@ -1,35 +1,50 @@
 import ApiError from "../utils/ApiError.js";
 import asyncHandler from "../utils/asyncHandler.js";
 import requestIp from "request-ip"
-import {UAParser} from "ua-parser-js";
-const UserInfo = asyncHandler(async(req , res , next)=>{
+import { UAParser } from "ua-parser-js";
+import geoip from "geoip-lite"
+
+
+const UserInfo = asyncHandler(async (req, res, next) => {
 
     try {
 
-     const clientIp = requestIp.getClientIp(req); 
-     const userAgent = req.headers["user-agent"]
-    const deviceInfo = new UAParser(userAgent).getResult();
+        const clientIp = requestIp.getClientIp(req);
+        const userAgent = req.headers["user-agent"]
+        const deviceInfo = new UAParser(userAgent).getResult();
 
-         const userInfo = {
-           ip: clientIp,
-      location: "Location lookup not implemented yet", // We'll add IP lookup later
-      operating: deviceInfo.os.name + " " + deviceInfo.os.version,
-      browser: deviceInfo.browser.name + " " + deviceInfo.browser.version,
-      device: deviceInfo.device.type || "desktop"
-         }
-         //after getting teh information print it on the console 
+        const userInfo = {
+            ip: clientIp,
+            location: "Location lookup not implemented yet", // We'll add IP lookup later
+            operating: deviceInfo.os.name + " " + deviceInfo.os.version,
+            browser: deviceInfo.browser.name + " " + deviceInfo.browser.version,
+            device: deviceInfo.device.type || "desktop"
+        }
+        //after getting teh information print it on the console 
+
+        console.log("user Location ")
+
+
      
-      console.log("===== User Info =====");
-    console.log(userInfo);
-    console.log("=====================");
-    
-    req.userInfo = userInfo 
-        next()
+         const locationData = geoip.lookup(clientIp); // no await needed
+        if (locationData) {
+            userInfo.location = `${locationData.city}, ${locationData.country}`;
+            
+        }
+        
+        console.log("===== User Info =====");
+        console.log(userInfo);
+        console.log("=====================");
+
+           req.userInfo = userInfo
+
+          next()
+      
     } catch (error) {
-        throw new ApiError(401 , "caanot get teh information from thte user")
+        throw new ApiError(401, "caanot get teh information from thte user")
     }
 
 })
 
 
-export default UserInfo ; 
+export default UserInfo; 

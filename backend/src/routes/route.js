@@ -2,6 +2,7 @@ import { Router } from "express";
 import { feedback } from "../controllers/feedback.controller.js";
 import UserInfo from "../middleware/userinfo.middleware.js";
 import gfgData from "../controllers/gfgData.js";
+import GitData from "../controllers/GitData.js";
 
 
 const router = Router() ; 
@@ -15,6 +16,7 @@ router.route("/user").get(UserInfo , (req ,res)=>{
 })
 
 router.route("/gfgData").get(gfgData)
+router.route("/GitData").get(GitData)
 
 
 
